@@ -1,0 +1,11 @@
+.Home-grid {
+  text-align: center;
+  padding: 10px;
+}
+
+.Home-chip {
+  font-size: 28px !important;
+  word-wrap: break-word;
+  background-color:inherit !important;
+  color: white !important;
+}
