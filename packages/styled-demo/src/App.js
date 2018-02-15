@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { MuiThemeProvider, createMuiTheme } from "material-ui/styles";
 import Home from "./routes/home";
+import Demo from "./routes/demo";
 import "./icon.css";
 import "./App.css";
 
@@ -14,6 +15,7 @@ class App extends React.Component {
           <div className="App-container">
             <Switch>
               <Route exact path="/" render={props => <Home {...props} />} />
+              <Route exact path="/demo" render={props => <Demo {...props} />} />
               <Route render={props => <Home {...props} />} />
             </Switch>
           </div>

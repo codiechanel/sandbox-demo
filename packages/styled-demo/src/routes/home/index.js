@@ -12,7 +12,7 @@ class App extends React.Component {
   componentDidMount() {
     let arr = []
     arr.push({title: "Palette", content: "show palletes"})
-    arr.push({title: "Demo", content: "show demo"})
+    arr.push({title: "Demo", content: "show demo",   route: "/demo"})
     arr.push({title: "About", content: "show about"})
     arr.push({title: "Donate", content: "make donations"})
     this.setState({menus: arr})
@@ -33,7 +33,7 @@ class App extends React.Component {
     }
     return (
       <Grid className="Home-grid" key={i} item xs={6} sm={3}>
-        <Chip
+        <Chip onClick={() => this.onHandleRoute(o)}
           className="Home-chip"
           avatar={avatar}
           label={o.title}
@@ -41,6 +41,11 @@ class App extends React.Component {
         <div>{o.content}</div>
       </Grid>
     );
+  }
+  onHandleRoute(o) {
+    if (o.route) {
+      this.props.history.push(o.route)
+    }
   }
   render() {
     
