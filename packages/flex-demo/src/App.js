@@ -124,6 +124,7 @@ const demoScreen2a = () =>
     <RaisedButton label="demoScreen2a" primary /> */}
   </div>
 
+
 // vertical elements to the left, spaced apart
 const demoScreen2b = () =>
   <div
@@ -223,6 +224,42 @@ const demoScreen5 = () =>
     
     
   </div>
+
+const demoScreen7 = () =>
+<div
+  style={{
+    display: 'flex',
+    flex: 0.75,
+    padding: 15,
+    flexDirection: 'row',
+    backgroundColor: 'gray',
+    // justifyContent: 'space-between',
+    alignItems: 'flex-start'
+  }}
+>
+<Button style={{flex: 2}} variant="raised">demoScreen7</Button>
+  <Button style={{flex: 1}} variant="raised">demoScreen7</Button>
+  <Button style={{flex: 1}} variant="raised">demoScreen7</Button>
+  
+</div>
+
+const demoScreen8 = () =>
+<div
+  style={{
+    display: 'flex',
+    flex: 0.75,
+    padding: 15,
+    flexDirection: 'row',
+    backgroundColor: 'gray',
+    // justifyContent: 'space-between',
+    alignItems: 'flex-start'
+  }}
+>
+<Button  variant="raised">demoScreen7</Button>
+  <Button style={{marginRight:"auto"}} variant="raised">demoScreen7</Button>
+  <Button  variant="raised">demoScreen7</Button>
+  
+</div>
 
 const styles = {
   menu: {
@@ -344,6 +381,16 @@ class App extends React.Component {
                     </Link>
                   </li>
                   <li>
+                    <Link onClick={this.handleClose} to="/demo7">
+                      Demo7
+                    </Link>
+                  </li>
+                  <li>
+                    <Link onClick={this.handleClose} to="/demo8">
+                      Auto margin 
+                    </Link>
+                  </li>
+                  <li>
                     <Link onClick={this.handleClose} to="/demo1">
                       Demo1
                     </Link>
@@ -407,6 +454,8 @@ class App extends React.Component {
             <Route exact path="/demo4" component={demoScreen4} />
             <Route exact path="/demo5" component={demoScreen5} />
             <Route exact path="/demo6" component={demoScreen6} />
+            <Route exact path="/demo7" component={demoScreen7} />
+            <Route exact path="/demo8" component={demoScreen8} />
             <Route path="/about" component={About} />
           </div>
         </MuiThemeProvider>
