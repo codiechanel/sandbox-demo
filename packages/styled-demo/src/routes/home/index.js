@@ -10,6 +10,7 @@ class App extends React.Component {
     menus: []
   }
   componentDidMount() {
+    
     let arr = []
     arr.push({title: "Palette", content: "show palletes"})
     arr.push({title: "Demo", content: "show demo",   route: "/demo"})

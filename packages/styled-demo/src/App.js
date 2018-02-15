@@ -14,7 +14,7 @@ class App extends React.Component {
         <MuiThemeProvider theme={theme}>
           <div className="App-container">
             <Switch>
-              <Route exact path="/" render={props => <Home {...props} />} />
+              <Route exact path="/" render={props => <Demo {...props} />} />
               <Route exact path="/demo" render={props => <Demo {...props} />} />
               <Route render={props => <Home {...props} />} />
             </Switch>
