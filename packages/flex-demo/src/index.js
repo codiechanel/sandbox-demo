@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 // import './bootstrap-grid.css'
 import App from './App'
+import './index.css'
 // import registerServiceWorker from './registerServiceWorker'
 
 // import injectTapEventPlugin from 'react-tap-event-plugin'

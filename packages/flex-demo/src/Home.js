@@ -13,13 +13,14 @@ class App extends React.Component {
   render() {
     return (
       <div
-        style={{
-          display: "flex",
-          flex: 1,
-          padding: 20,
-          flexDirection: "column",
-          backgroundColor: "lightgray"
-        }}
+      className="container"
+        // style={{
+        //   display: "flex",
+        //   flex: 1,
+        //   padding: 20,
+        //   flexDirection: "column",
+        //   backgroundColor: "lightgray"
+        // }}
       >
         <div className="App-header">
           <h2>Welcome to Flex Demo</h2>

@@ -60,7 +60,7 @@ class App extends React.Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <Grid style={{ marginTop: 20, }} container spacing={12}>
+        <Grid style={{ marginTop: 20, }} container spacing={16}>
             {this.state.menus.map(this.mapper.bind(this))}
           </Grid>
       </div>
