@@ -3,6 +3,7 @@ import Avatar from "material-ui/Avatar";
 import Chip from "material-ui/Chip";
 import Grid from "material-ui/Grid";
 import './styles.css';
+import  style  from './inline.module.css'
 
 class App extends React.Component {
   state = {
@@ -45,14 +46,7 @@ class App extends React.Component {
     
     return (
       <div
-        className="container"
-        style={{
-          padding: 30,
-          backgroundColor: "#202C55",
-          color: "white",
-          alignItems: "center",
-          justifyContent: "center"
-        }}
+        className={`container ${style.container}`}
       >
         <header className="App-header">
           <h1 className="App-title">Home</h1>
