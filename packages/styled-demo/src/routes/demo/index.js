@@ -4,7 +4,11 @@ import Paper from "material-ui/Paper";
 import Button from "material-ui/Button";
 import Grid from "material-ui/Grid";
 import { Button as RButton, ButtonIcon } from "rmwc/Button";
+import Progress,  { CircularProgress } from "material-ui/Progress";
+import FolderIcon from "material-ui-icons/Folder";
+import Avatar from 'material-ui/Avatar';
 import { Chip, ChipSet } from "rmwc/Chip";
+import { Loader, TextBelowIcon } from "@codiechanel/codie-ui";
 import Animated from "../../components/Animated";
 import style from "./inline.module.css";
 // const Button = styled.button``;
@@ -144,20 +148,22 @@ class App extends React.Component {
           
             </Animated> */}
             <Animated variant="bounce">
-            <p>the default win</p>
+              <p>the default win</p>
             </Animated>
             <Animated event="onClick" variant="bounce">
-            <p>onClick</p>
+              <p>onClick</p>
             </Animated>
-            <Animated ref={c => this.nice = c} event="onMouseEnter" variant="bounce">
-            <p onClick={() => this.nice.animate()}>onMouseEnter</p>
+            <Animated
+              ref={c => (this.nice = c)}
+              event="onMouseEnter"
+              variant="bounce"
+            >
+              <p onClick={() => this.nice.animate()}>onMouseEnter</p>
             </Animated>
             <Animated event="onClick" variant="zoomIn">
-            <p>lightSpeedIn</p>
-            <RButton raised>Rwc</RButton>
+              <p>lightSpeedIn</p>
+              <RButton raised>Rwc</RButton>
             </Animated>
-
-            
 
             <div
               className="animated bounce"
@@ -173,7 +179,16 @@ class App extends React.Component {
               great
             </div>
           </Grid>
-          <Grid item xs={12} sm={6} />
+          <Grid item xs={12} sm={6} style={{backgroundColor:"white"}} >
+          <CircularProgress size={50} style={{color:"white"}} />
+            <Loader />
+            <TextBelowIcon title="Cool">
+              {" "}
+              <Avatar>
+                <FolderIcon />
+              </Avatar>{" "}
+            </TextBelowIcon>){" "}
+          </Grid>
         </Grid>
       </Paper>
     );
