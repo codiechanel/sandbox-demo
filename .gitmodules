@@ -1,3 +1,0 @@
-[submodule "packages/codie-ui"]
-	path = packages/codie-ui
-	url = git@github.com:codiechanel/codie-ui.git
