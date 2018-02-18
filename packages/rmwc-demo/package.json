@@ -1,0 +1,17 @@
+{
+  "name": "rnwc-demo",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2",
+    "rmwc": "^1.2.0"
+  },
+  "scripts": {
+    "start": "simple-pack dev",
+    "prebuild": "npx rimraf build/*",
+    "build": "simple-pack prod",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

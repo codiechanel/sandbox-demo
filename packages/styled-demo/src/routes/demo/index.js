@@ -8,7 +8,10 @@ import Progress,  { CircularProgress } from "material-ui/Progress";
 import FolderIcon from "material-ui-icons/Folder";
 import Avatar from 'material-ui/Avatar';
 import { Chip, ChipSet } from "rmwc/Chip";
-import { Loader, TextBelowIcon } from "@codiechanel/codie-ui";
+// import { Loader, TextBelowIcon } from "@codiechanel/codie-ui";
+// import { Loader, TextBelowIcon } from "webpack-library-starter";
+import Mine from  "my-component"
+
 import Animated from "../../components/Animated";
 import style from "./inline.module.css";
 // const Button = styled.button``;
@@ -180,14 +183,7 @@ class App extends React.Component {
             </div>
           </Grid>
           <Grid item xs={12} sm={6} style={{backgroundColor:"white"}} >
-          <CircularProgress size={50} style={{color:"white"}} />
-            <Loader />
-            <TextBelowIcon title="Cool">
-              {" "}
-              <Avatar>
-                <FolderIcon />
-              </Avatar>{" "}
-            </TextBelowIcon>){" "}
+        <Mine />
           </Grid>
         </Grid>
       </Paper>
