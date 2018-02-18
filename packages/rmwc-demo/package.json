@@ -9,9 +9,9 @@
     "rmwc": "^1.2.0"
   },
   "scripts": {
-    "start": "simple-pack dev",
-    "prebuild": "npx rimraf build/*",
-    "build": "simple-pack prod",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }
