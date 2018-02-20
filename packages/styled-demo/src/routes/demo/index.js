@@ -10,7 +10,7 @@ import Avatar from 'material-ui/Avatar';
 import { Chip, ChipSet } from "rmwc/Chip";
 // import { Loader, TextBelowIcon } from "@codiechanel/codie-ui";
 // import { Loader, TextBelowIcon } from "webpack-library-starter";
-import Mine from  "my-component"
+
 
 import Animated from "../../components/Animated";
 import style from "./inline.module.css";
@@ -183,7 +183,7 @@ class App extends React.Component {
             </div>
           </Grid>
           <Grid item xs={12} sm={6} style={{backgroundColor:"white"}} >
-        <Mine />
+        
           </Grid>
         </Grid>
       </Paper>
