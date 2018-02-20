@@ -5,7 +5,7 @@ import Home from "./routes/home";
 import Demo from "./routes/demo";
 import "./icon.css";
 import "./App.css";
-
+import './material-components-web.css'
 class App extends React.Component {
   render() {
     let theme = createTheme(palObj);
