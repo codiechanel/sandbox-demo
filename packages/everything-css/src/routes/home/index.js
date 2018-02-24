@@ -14,7 +14,7 @@ class App extends React.Component {
     arr.push({title: "Grid", content: "show grid", route: "/grid"})
     arr.push({title: "Demo", content: "show demo"})
     arr.push({title: "About", content: "show about"})
-    arr.push({title: "Donate", content: "make donations"})
+    arr.push({title: "Masonry", content: "masonry",  route: "/masonry"})
     this.setState({menus: arr})
   }
   mapper(o, i) {

@@ -12,6 +12,7 @@
     "react-router-dom": "^4.2.2"
   },
   "scripts": {
+    "s": "simple-pack dev",
     "start": "simple-pack dev",
     "prebuild": "npx rimraf build/*",
     "build": "simple-pack prod",

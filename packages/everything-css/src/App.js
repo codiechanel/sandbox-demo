@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { MuiThemeProvider, createMuiTheme } from "material-ui/styles";
 import Home from "./routes/home";
 import Grid from "./routes/grid";
+import Masonry from "./routes/masonry";
 import "./icon.css";
 import "./App.css";
 
@@ -16,6 +17,7 @@ class App extends React.Component {
             <Switch>
               <Route exact path="/" render={props => <Home {...props} />} />
               <Route exact path="/grid" render={props => <Grid {...props} />} />
+              <Route exact path="/masonry" render={props => <Masonry {...props} />} />
               <Route render={props => <Home {...props} />} />
             </Switch>
           </div>
