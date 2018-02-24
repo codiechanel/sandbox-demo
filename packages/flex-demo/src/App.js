@@ -368,7 +368,7 @@ class App extends React.Component {
               showMenuIconButton
             /> */}
             <Drawer
-              docked={false}
+              // docked={false}
               // onRequestChange={open => this.setState({ open })}
               width={200}
               open={this.state.open}
