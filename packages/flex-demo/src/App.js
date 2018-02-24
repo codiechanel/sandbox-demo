@@ -1,29 +1,31 @@
-import React from 'react'
+import React from "react";
 // import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 // import logo from './logo.svg';
-import './App.css'
+import "./App.css";
 
-import Button from "material-ui/Button"
-import Drawer from 'material-ui/Drawer'
-import { HashRouter as Router, Route, Link } from 'react-router-dom'
-import mainStore from './MainStore'
-import Home from './Home'
+import Button from "material-ui/Button";
+import Drawer from "material-ui/Drawer";
+import { HashRouter as Router, Route, Link } from "react-router-dom";
+import mainStore from "./MainStore";
+import Home from "./Home";
 import { MuiThemeProvider, createMuiTheme } from "material-ui/styles";
 
-const homeScreen = ({ location }) => <Home location={location} mainStore={mainStore} />
+const homeScreen = ({ location }) => (
+  <Home location={location} mainStore={mainStore} />
+);
 
 // center all child
-const demoScreen1 = () =>
+const demoScreen1 = () => (
   <div
     style={{
-      display: 'flex',
+      display: "flex",
       flex: 1,
-      height: '100%',
+      height: "100%",
 
-      flexDirection: 'column',
-      backgroundColor: 'gray',
-      justifyContent: 'center',
-      alignItems: 'center'
+      flexDirection: "column",
+      backgroundColor: "gray",
+      justifyContent: "center",
+      alignItems: "center"
     }}
   >
     {/* <RaisedButton label="demoScreen1" primary /> */}
@@ -31,19 +33,21 @@ const demoScreen1 = () =>
     <Button variant="raised">demoScreen2</Button>
     {/* <RaisedButton label="demoScreen1" primary /> */}
   </div>
+);
 
-const msgComp = () =>
+const msgComp = () => (
   <div
     style={{
       padding: 15,
       zIndex: 2,
-      position: 'absolute',
+      position: "absolute",
       left: 0,
       top: 0
     }}
   >
     <h3>Here we center all child elements vertically and horizontally</h3>
   </div>
+);
 
 function withSubscription(WrappedComponent, MsgComponent) {
   return class extends React.Component {
@@ -51,46 +55,46 @@ function withSubscription(WrappedComponent, MsgComponent) {
       return (
         <div
           style={{
-            height: '100%',
-            position: 'relative',
-            backgroundColor: 'red'
+            height: "100%",
+            position: "relative",
+            backgroundColor: "red"
           }}
         >
           <MsgComponent />
           <WrappedComponent />
         </div>
-      )
+      );
     }
-  }
+  };
 }
 
-const demo1tWithSubscription = withSubscription(demoScreen1, msgComp)
+const demo1tWithSubscription = withSubscription(demoScreen1, msgComp);
 
 // equal spacing between elements
-const demoScreen2 = () =>
+const demoScreen2 = () => (
   <div
     style={{
-      display: 'flex',
+      display: "flex",
       flex: 1,
-      flexDirection: 'row',
-      backgroundColor: 'gray',
-      justifyContent: 'space-around',
-      alignItems: 'flex-start',
-      position: 'relative'
+      flexDirection: "row",
+      backgroundColor: "gray",
+      justifyContent: "space-around",
+      alignItems: "flex-start",
+      position: "relative"
     }}
   >
     <div
       style={{
         zIndex: 2,
         opacity: 0.5,
-        backgroundColor: 'red',
-        width: '100%',
-        position: 'absolute',
+        backgroundColor: "red",
+        width: "100%",
+        position: "absolute",
         left: 0,
         bottom: 0
       }}
     >
-      <h3 style={{ margin: 5, backgroundColor: 'blue', textAlign: 'center' }}>
+      <h3 style={{ margin: 5, backgroundColor: "blue", textAlign: "center" }}>
         Equal space around child elements.
       </h3>
     </div>
@@ -100,42 +104,43 @@ const demoScreen2 = () =>
 
     <RaisedButton label="demoScreen2" primary /> */}
   </div>
+);
 
 // this makes elements apart
-const demoScreen2a = () =>
+const demoScreen2a = () => (
   <div
     style={{
-      display: 'flex',
+      display: "flex",
       flex: 0.75,
       padding: 15,
-      flexDirection: 'row',
-      backgroundColor: 'gray',
-      justifyContent: 'space-between',
-      alignItems: 'flex-start'
+      flexDirection: "row",
+      backgroundColor: "gray",
+      justifyContent: "space-between",
+      alignItems: "flex-start"
     }}
   >
-  <Button variant="raised">demoScreen2a</Button>
+    <Button variant="raised">demoScreen2a</Button>
     <Button variant="raised">demoScreen2a</Button>
     {/* <RaisedButton label="demoScreen2a" primary />
 
     <RaisedButton label="demoScreen2a" primary /> */}
   </div>
-
+);
 
 // vertical elements to the left, spaced apart
-const demoScreen2b = () =>
+const demoScreen2b = () => (
   <div
     style={{
-      display: 'flex',
+      display: "flex",
       flex: 0.75,
       padding: 15,
-      flexDirection: 'column',
-      backgroundColor: 'gray',
-      justifyContent: 'space-between',
-      alignItems: 'flex-start'
+      flexDirection: "column",
+      backgroundColor: "gray",
+      justifyContent: "space-between",
+      alignItems: "flex-start"
     }}
   >
-  <Button variant="raised">demoScreen2b</Button>
+    <Button variant="raised">demoScreen2b</Button>
     <Button variant="raised">demoScreen2b</Button>
     <Button variant="raised">demoScreen2b</Button>
     {/* <RaisedButton label="demoScreen2b" primary />
@@ -143,137 +148,143 @@ const demoScreen2b = () =>
     <RaisedButton label="demoScreen2b" primary />
     <RaisedButton label="demoScreen2b" primary /> */}
   </div>
+);
 
 // the same as above, but now they start from the bottom
-const demoScreen3 = () =>
+const demoScreen3 = () => (
   <div
     style={{
-      display: 'flex',
+      display: "flex",
       flex: 0.75,
       padding: 15,
-      flexDirection: 'row',
-      backgroundColor: 'gray',
-      justifyContent: 'space-around',
-      alignItems: 'flex-end'
+      flexDirection: "row",
+      backgroundColor: "gray",
+      justifyContent: "space-around",
+      alignItems: "flex-end"
     }}
   >
-  <Button variant="raised">demoScreen3</Button>
     <Button variant="raised">demoScreen3</Button>
-    
+    <Button variant="raised">demoScreen3</Button>
+
     {/* <RaisedButton label="demoScreen3" primary />
 
     <RaisedButton label="demoScreen3" primary /> */}
   </div>
+);
 
 // the same as above, but now they are at the middle
-const demoScreen3a = () =>
+const demoScreen3a = () => (
   <div
     style={{
-      display: 'flex',
+      display: "flex",
       flex: 0.75,
       padding: 15,
-      flexDirection: 'row',
-      backgroundColor: 'gray',
-      justifyContent: 'space-around',
-      alignItems: 'center'
+      flexDirection: "row",
+      backgroundColor: "gray",
+      justifyContent: "space-around",
+      alignItems: "center"
     }}
   >
-  <Button variant="raised">demoScreen3a</Button>
     <Button variant="raised">demoScreen3a</Button>
-    
-
+    <Button variant="raised">demoScreen3a</Button>
   </div>
+);
 
 // here we align all items to the right, from top to bottom
-const demoScreen4 = () =>
+const demoScreen4 = () => (
   <div
     style={{
-      display: 'flex',
+      display: "flex",
       flex: 0.75,
       padding: 15,
-      flexDirection: 'column',
-      backgroundColor: 'gray',
-      justifyContent: 'flex-start',
-      alignItems: 'flex-end'
+      flexDirection: "column",
+      backgroundColor: "gray",
+      justifyContent: "flex-start",
+      alignItems: "flex-end"
     }}
   >
-  <Button variant="raised">demoScreen4</Button>
     <Button variant="raised">demoScreen4</Button>
-   
-
-    
+    <Button variant="raised">demoScreen4</Button>
   </div>
+);
 
-const demoScreen5 = () =>
+const demoScreen5 = () => (
   <div
     style={{
-      display: 'flex',
+      display: "flex",
       flex: 0.75,
       padding: 15,
-      flexDirection: 'row',
-      backgroundColor: 'gray',
-      justifyContent: 'flex-end',
-      alignItems: 'flex-end'
+      flexDirection: "row",
+      backgroundColor: "gray",
+      justifyContent: "flex-end",
+      alignItems: "flex-end"
     }}
   >
-  <Button variant="raised">demoScreen5</Button>
     <Button variant="raised">demoScreen5</Button>
-    
-    
+    <Button variant="raised">demoScreen5</Button>
   </div>
+);
 
-const demoScreen7 = () =>
-<div
-  style={{
-    display: 'flex',
-    flex: 0.75,
-    padding: 15,
-    flexDirection: 'row',
-    backgroundColor: 'gray',
-    // justifyContent: 'space-between',
-    alignItems: 'flex-start'
-  }}
->
-<Button style={{flex: 2}} variant="raised">demoScreen7</Button>
-  <Button style={{flex: 1}} variant="raised">demoScreen7</Button>
-  <Button style={{flex: 1}} variant="raised">demoScreen7</Button>
-  
-</div>
+const demoScreen7 = () => (
+  <div
+    style={{
+      display: "flex",
+      flex: 0.75,
+      padding: 15,
+      flexDirection: "row",
+      backgroundColor: "gray",
+      // justifyContent: 'space-between',
+      alignItems: "flex-start"
+    }}
+  >
+    <Button style={{ flex: 2 }} variant="raised">
+      demoScreen7
+    </Button>
+    <Button style={{ flex: 1 }} variant="raised">
+      demoScreen7
+    </Button>
+    <Button style={{ flex: 1 }} variant="raised">
+      demoScreen7
+    </Button>
+  </div>
+);
 
-const demoScreen8 = () =>
-<div
-  style={{
-    display: 'flex',
-    flex: 0.75,
-    padding: 15,
-    flexDirection: 'row',
-    backgroundColor: 'gray',
-    // justifyContent: 'space-between',
-    alignItems: 'flex-start'
-  }}
->
-<Button  variant="raised">demoScreen7</Button>
-  <Button style={{marginRight:"auto"}} variant="raised">demoScreen7</Button>
-  <Button  variant="raised">demoScreen7</Button>
-  
-</div>
+const demoScreen8 = () => (
+  <div
+    style={{
+      display: "flex",
+      flex: 0.75,
+      padding: 15,
+      flexDirection: "row",
+      backgroundColor: "gray",
+      // justifyContent: 'space-between',
+      alignItems: "flex-start"
+    }}
+  >
+    <Button variant="raised">demoScreen7</Button>
+    <Button style={{ marginRight: "auto" }} variant="raised">
+      demoScreen7
+    </Button>
+    <Button variant="raised">demoScreen7</Button>
+  </div>
+);
 
 const styles = {
   menu: {
-    marginLeft: '60px',
-    marginRight: 'auto'
+    marginLeft: "60px",
+    marginRight: "auto"
   }
-}
-const demoScreen6 = () =>
-  <header style={{ background: '#333' }}>
+};
+const demoScreen6 = () => (
+  <header style={{ background: "#333" }}>
     <nav
       style={{
-        display: 'flex',
+        display: "flex",
 
-        alignItems: 'center',
-        width: '70%',
-        maxWidth: '1200px',
-        margin: '0 auto'
+        alignItems: "center",
+        width: "70%",
+        maxWidth: "1200px",
+        margin: "0 auto"
       }}
     >
       <h1 class="logo">LOGO</h1>
@@ -300,16 +311,17 @@ const demoScreen6 = () =>
       </ul>
     </nav>
   </header>
+);
 
-const About = () =>
+const About = () => (
   <div
     style={{
       padding: 20,
-      display: 'flex',
+      display: "flex",
       flex: 1,
-      flexDirection: 'column',
-      overflow: 'auto',
-      backgroundColor: 'lightgray'
+      flexDirection: "column",
+      overflow: "auto",
+      backgroundColor: "lightgray"
     }}
   >
     <h2>About the color scheme used</h2>
@@ -319,45 +331,51 @@ const About = () =>
     <p>the app bar, which is always visible</p>
     <p>and the gray component which changes based on navigation</p>
   </div>
-
+);
 
 class App extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       open: false
-    }
+    };
 
-    this.handler = this.handler.bind(this)
-    this.handleClose = this.handleClose.bind(this)
+    this.handler = this.handler.bind(this);
+    this.handleClose = this.handleClose.bind(this);
   }
   componentDidMount() {
-    console.log('mount')
+    console.log("mount");
   }
 
   handler() {
-    this.setState({ open: !this.state.open })
+    this.setState({ open: !this.state.open });
   }
 
   handleClose() {
-    this.setState({ open: false })
+    this.setState({ open: false });
   }
 
+  toggleDrawer = (side, open) => () => {
+    this.setState({
+      [side]: open
+    });
+  };
+
   render() {
-    let theme = createTheme(palObj)
+    let theme = createTheme(palObj);
     return (
       <Router>
         <MuiThemeProvider theme={theme}>
           <div
             style={{
-              display: 'flex',
+              display: "flex",
               flex: 1,
               padding: 20,
-              flexDirection: 'column',
-              backgroundColor: 'blue'
+              flexDirection: "column",
+              backgroundColor: "blue"
             }}
           >
-          <Button onClick={this.handler}>Home</Button>
+            <Button onClick={this.handler}>Home</Button>
             {/* <AppBar
               title="Flexbox Playground"
               onLeftIconButtonTouchTap={this.handler}
@@ -365,26 +383,31 @@ class App extends React.Component {
               showMenuIconButton
             /> */}
             <Drawer
-              // docked={false}
-              // onRequestChange={open => this.setState({ open })}
+              onClose={this.toggleDrawer("open", false)}
               width={200}
               open={this.state.open}
             >
-              <div style={{ paddingTop: 20 }}>
+              <div
+                style={{ paddingTop: 20 }}
+                tabIndex={0}
+                role="button"
+                onClick={this.toggleDrawer("open", false)}
+                onKeyDown={this.toggleDrawer("open", false)}
+              >
                 <ul>
                   <li>
-                    <Link onClick={this.handleClose} to="/">
+                    <Link  to="/">
                       Home
                     </Link>
                   </li>
                   <li>
-                    <Link onClick={this.handleClose} to="/demo7">
+                    <Link  to="/demo7">
                       Demo7
                     </Link>
                   </li>
                   <li>
-                    <Link onClick={this.handleClose} to="/demo8">
-                      Auto margin 
+                    <Link  to="/demo8">
+                      Auto margin
                     </Link>
                   </li>
                   <li>
@@ -457,10 +480,9 @@ class App extends React.Component {
           </div>
         </MuiThemeProvider>
       </Router>
-    )
+    );
   }
 }
-
 
 let palObj = {
   primaryMain: "#34495e",
@@ -475,12 +497,11 @@ let palObj = {
   textSecondary: "grey"
 };
 
-
 /**
- * @param {object} palette 
+ * @param {object} palette
  * - should be able to generate color for text based on background....
  */
-function createTheme(palette,  type = "light") {
+function createTheme(palette, type = "light") {
   const result = createMuiTheme({
     palette: {
       type: type,
@@ -490,8 +511,8 @@ function createTheme(palette,  type = "light") {
       primary: {
         light: palette.primaryLight,
         main: palette.primaryMain,
-        dark: palette.primaryDark, 
-        // contrastDefaultColor: 'dark', 
+        dark: palette.primaryDark
+        // contrastDefaultColor: 'dark',
         // contrastText: '#fff',
       },
       secondary: {
@@ -532,31 +553,31 @@ function createTheme(palette,  type = "light") {
         }
       },
       /**
-       * we need to set this,  child element who uses inherit 
-       * will get this color 
+       * we need to set this,  child element who uses inherit
+       * will get this color
        */
       MuiList: {
         root: {
           backgroundColor: palette.secondaryDark
         }
       },
- /**
+      /**
        * root will be applied if color is "default"
-       * "inherit" will simply get the colors from whatever the 
+       * "inherit" will simply get the colors from whatever the
        * background is
-       * lets make the default the same as the list item 
+       * lets make the default the same as the list item
        */
       MuiListSubheader: {
         root: {
-          backgroundColor: palette.primaryMain, 
+          backgroundColor: palette.primaryMain,
           color: palette.textPrimary
-        }, 
+        },
         colorPrimary: {
-          backgroundColor: palette.primaryMain, 
+          backgroundColor: palette.primaryMain,
           color: palette.textPrimary
-        }, 
+        }
       },
-      
+
       MuiListItem: {
         root: {
           backgroundColor: palette.primaryLight
@@ -620,9 +641,9 @@ function createTheme(palette,  type = "light") {
           // backgroundColor: palette.third,
           color: palette.textSecondary
         }
-      }, 
+      },
       /**
-       * we are not going to set default colors for this, 
+       * we are not going to set default colors for this,
        * since some text needs black, lets allow
        * child components to use it.
        * child components should explicitly choose "primary"
@@ -631,18 +652,18 @@ function createTheme(palette,  type = "light") {
       MuiTypography: {
         // body1: {
         //   color: palette.textPrimary
-        // }, 
+        // },
         // // display1: {
         //   color: palette.textPrimary
-        // }, 
+        // },
         colorPrimary: {
           color: palette.textPrimary
-        }, 
+        },
         colorSecondary: {
           color: palette.textSecondary
-        }, 
-      },
-    },
+        }
+      }
+    }
     //   MuiIconButton: {
     //   root : {
     //     color: palette.secondaryMain
@@ -656,4 +677,4 @@ function createTheme(palette,  type = "light") {
   return result;
 }
 
-export default App
+export default App;
