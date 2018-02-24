@@ -1,19 +1,16 @@
-import React, { Component } from 'react'
+import React from 'react'
 // import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 // import logo from './logo.svg';
 import './App.css'
 
 import Button from "material-ui/Button"
 import Drawer from 'material-ui/Drawer'
-import AppBar from 'material-ui/AppBar'
 import { HashRouter as Router, Route, Link } from 'react-router-dom'
 import mainStore from './MainStore'
-import { observer } from 'mobx-react'
-import { observable, action } from 'mobx'
 import Home from './Home'
 import { MuiThemeProvider, createMuiTheme } from "material-ui/styles";
 
-const homeScreen = ({ location }) => <Home mainStore={mainStore} />
+const homeScreen = ({ location }) => <Home location={location} mainStore={mainStore} />
 
 // center all child
 const demoScreen1 = () =>
@@ -323,7 +320,7 @@ const About = () =>
     <p>and the gray component which changes based on navigation</p>
   </div>
 
-@observer
+
 class App extends React.Component {
   constructor(props) {
     super(props)
