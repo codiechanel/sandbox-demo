@@ -1,0 +1,21 @@
+.masonryLayout {
+  column-count: auto;
+  column-width: 100px;
+  column-gap: 0;
+}
+.masonryLayout__panel {
+  -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+  page-break-inside: avoid; /* Firefox */
+  break-inside: avoid; /* IE 10+ */
+
+  padding: 5px;
+}
+.masonryLayout__panelContent {
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.theImage {
+  max-width: 100%;
+  max-height: 100%;
+}

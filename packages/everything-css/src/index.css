@@ -39,7 +39,7 @@ div::-webkit-scrollbar-thumb {
   flex: 1;
   flex-direction: column;
   overflow-y: auto;
-  overflow-x: hidden;
+  overflow-x: auto;
   /* background-color: #394a5e; */
 }
 
