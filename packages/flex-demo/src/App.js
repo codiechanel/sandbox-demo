@@ -397,7 +397,7 @@ class App extends React.Component {
                 <ul>
                   <li>
                     <Link  to="/">
-                      Home
+                      Homer
                     </Link>
                   </li>
                   <li>
